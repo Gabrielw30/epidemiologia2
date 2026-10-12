@@ -1,9 +1,9 @@
 {% extends "base.html" %}
 
-{%block titulo%} Analitico{%endblock titulo%}
+{%block titulo%} Ambos{%endblock titulo%}
 {% block conteudo %}
 
-<form action="/form_analitico" method="POST" class="formulario">
+<form action="{{ url_for('formulario_analitico') }}" method="POST" class="formulario">
 
     <h2>Parâmetros da Simulação</h2>
 
@@ -20,26 +20,6 @@
             min="0"
             required
         >
-
-    </div>
-
-
-    <div class="campo">
-
-        <label>
-            Tempo da Simulação (dias)
-        </label>
-
-        <input
-            type="number"
-            name="tempo"
-            min="1"
-            required
-        >
-
-    </div>
-
-
 
     <button type="submit">
         Gerar Gráfico

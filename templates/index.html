@@ -35,27 +35,30 @@
 </section>
 
 <section class="informacoes">
-
-    <div class="card">
-        <h3>Modelo SI</h3>
-        <p>
-            No modelo SI, indivíduos suscetíveis podem se tornar infectados,
-            permanecendo infectados durante toda a simulação.
-        </p>
+<div class="card shadow-sm mb-3">
+        <div class="card-body">
+            <h3 class="card-title text-primary">Modelo SI</h3>
+            <p class="card-text">
+                Simulação da propagação epidemiológica considerando populações de Suscetíveis e Infectados sem taxa de recuperação.
+            </p>
+        </div>
     </div>
 
-    <div class="card">
-        <h3>Modelo SIS</h3>
-        <p>
-            No modelo SIS, indivíduos infectados podem se recuperar e voltar
-            ao estado suscetível, permitindo novos ciclos de infecção.
-        </p>
+    <div class="card shadow-sm mb-3">
+        <div class="card-body">
+            <h3 class="card-title text-success">Método de Euler</h3>
+            <p class="card-text">
+                Aproximação numérica iterativa para a resolução passo a passo das equações diferenciais do modelo.
+            </p>
+        </div>
     </div>
 
-    <div class="card">
-        <h3>Gráficos</h3>
-        <p>
-            Os resultados são exibidos em gráficos que facilitam a análise
-            da propagação da doença e da influência dos parâmetros da
-            simulação.
+    <div class="card shadow-sm mb-3">
+        <div class="card-body">
+            <h3 class="card-title text-info">Solução Analítica</h3>
+            <p class="card-text">
+                Cálculo matemático exato da curva logística, permitindo comparar a precisão dos métodos.
+            </p>
+        </div>
+    </div>
 {% endblock conteudo %}

@@ -1,20 +1,40 @@
-{%extends 'base.html'%}
-{% block titulo%} Graficos SI {% endblock titulo%}
-{%block conteudo%}
+{% extends 'base.html' %}
+
+{% block titulo %} Gráficos do Modelo SI {% endblock titulo %}
+
+{% block conteudo %}
 
 <section class="introducao">
-
-
-<a href="{{url_for('visualizar_graficos_euler')}}" class="botao">Euler</a>
-<a href="{{url_for('visualizar_graficos_analitico')}}" class="botao">Analitico</a>
-<a href="{{url_for('visualizar_graficos_ambos')}}" class="botao">Ambos</a>
-
-
-
+    <h2>Análise de Gráficos Epidemiológicos</h2>
+    <p>
+        Selecione o método de visualização que deseja analisar. Você pode examinar os resultados das aproximações numéricas, a solução exata ou a comparação sobreposta.
+    </p>
 </section>
 
+<section class="informacoes">
+    <div class="card">
+        <h3>Método de Euler</h3>
+        <p>
+            Visualize os gráficos gerados pela aproximação numérica iterativa, observando a evolução das populações passo a passo.
+        </p>
+        <a href="{{ url_for('visualizar_graficos_euler') }}" class="botao">Ver Euler</a>
+    </div>
 
+    <div class="card">
+        <h3>Solução Analítica</h3>
+        <p>
+            Acesse os gráficos da solução matemática exata da equação diferencial do modelo SI (curva logística contínua).
+        </p>
+        <a href="{{ url_for('visualizar_graficos_analitico') }}" class="botao">Ver Analítico</a>
+    </div>
 
+    <div class="card">
+        <h3>Comparação Direta</h3>
+        <p>
+            Exiba as curvas do Método de Euler e da Solução Analítica sobrepostas no mesmo gráfico para avaliar a precisão do algoritmo.
+        </p>
+        <a href="{{ url_for('visualizar_graficos_ambos') }}" class="botao">Ver Ambos</a>
+    </div>
+</section>
 
-
-{%endblock conteudo%}
+{% endblock conteudo %}

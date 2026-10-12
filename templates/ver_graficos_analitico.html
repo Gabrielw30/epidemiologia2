@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+{%block conteudo%}
+<div class="graficos_tabela">
+  {% for d in dados %}
+  <div class="graficos_dados">
+    <h2>Grafico:{{ loop.index }} </h2>
+    <img src="{{ url_for('static', filename='img/analitico/' ~ d.img) }}" alt="" id="img_grafico">
+    <p><strong>Beta:</strong>{{d.beta}}</p>
+    </div>
+    <form action="" method="post">
+      <input type="hidden" name="id" value="{{d.id}}">
+      <button type="submit">Apagar</button>
+    </form>
+  {% endfor %}
+  </div>
+{%endblock conteudo%}

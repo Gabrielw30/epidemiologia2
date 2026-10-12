@@ -1,0 +1,50 @@
+{% extends "base.html" %}
+
+{% block titulo %}
+Sobre o Projeto | Simulação Epidemiológica
+{% endblock titulo %}
+
+{% block conteudo %}
+<section class="introducao">
+    <h2>Sobre o Projeto</h2>
+    <p>
+        Esta aplicação web foi desenvolvida com o objetivo de simular e visualizar a propagação de doenças infecciosas através do <strong>Modelo SI (Suscetíveis - Infectados)</strong>, permitindo comparar aproximações numéricas com soluções matemáticas exatas.
+    </p>
+</section>
+
+<!-- Conteiner flexível já estilizado no teu CSS (.informacoes) -->
+<section class="informacoes">
+    <div class="card">
+        <h3>Modelo SI</h3>
+        <p>
+            Na simulação SI, a população é dividida em dois grupos: <strong>Suscetíveis (S)</strong>, que podem contrair a doença, e <strong>Infectados (I)</strong>, que a transmitem. Sem taxa de cura, a população tende a ser infetada ao longo do tempo.
+        </p>
+    </div>
+
+    <div class="card">
+        <h3>Método de Euler</h3>
+        <p>
+            Técnica numérica iterativa para resolver equações diferenciais. O algoritmo calcula a variação instantânea e projeta o estado da população no passo seguinte (Δt = 0.5).
+        </p>
+    </div>
+
+    <div class="card">
+        <h3>Solução Analítica</h3>
+        <p>
+            Resolução matemática exata do modelo representada por uma função logística. Funciona como o gabarito real para medir a precisão do Método de Euler.
+        </p>
+    </div>
+</section>
+
+<!-- Bloco complementar usando a classe card -->
+<section class="informacoes" style="margin-top: 30px;">
+    <div class="card" style="width: 100%; max-width: 1010px;">
+        <h3>Tecnologias Utilizadas</h3>
+        <p>
+            <strong>Backend:</strong> Python, Flask e Flask-SQLAlchemy<br>
+            <strong>Cálculos e Gráficos:</strong> NumPy e Matplotlib<br>
+            <strong>Frontend:</strong> HTML5, CSS3 e Jinja2 Templates
+        </p>
+    </div>
+</section>
+{% endblock conteudo %}
