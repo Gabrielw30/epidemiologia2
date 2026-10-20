@@ -1,4 +1,4 @@
-from flask import Flask, render_template, request, redirect
+from flask import Flask, render_template, request, redirect, url_for
 from funcao_grafico_euler import gerar_grafico_euler
 from funcao_grafico_ambos import gerar_grafico_ambos
 from funcao_grafico_analitico import gerar_grafico_analitico
@@ -34,6 +34,7 @@ def formulario_euler():
 
         db.session.add(adicionado)
         db.session.commit()
+        return redirect(url_for('visualizar_graficos_euler'))
 
     return render_template("form_euler.html")
 
@@ -54,6 +55,7 @@ def formulario_analitico():
 
         db.session.add(adicionado)
         db.session.commit()
+        return redirect(url_for('visualizar_graficos_analitico'))
     return render_template("form_analitico.html")
 
 
@@ -76,6 +78,7 @@ def formulario_ambos():
 
         db.session.add(adicionado)
         db.session.commit()
+        return redirect(url_for('visualizar_graficos_ambos'))
     return render_template('form_ambos.html')
 
 
